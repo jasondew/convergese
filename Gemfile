@@ -5,10 +5,11 @@ gem "haml"
 
 group :development do
   gem "mysql"
-  gem "mongrel"
-  gem "cgi_multipart_eof_fix"
-  gem "fastthread"
-  gem "mongrel_experimental"
+# heroku loads *all* gems and this breaks :/
+#  gem "mongrel"
+#  gem "cgi_multipart_eof_fix"
+#  gem "fastthread"
+#  gem "mongrel_experimental"
 end
 
 group :test do
