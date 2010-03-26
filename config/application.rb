@@ -5,7 +5,7 @@ require 'rails/all'
 # Auto-require default libraries and those for the current Rails environment.
 Bundler.require :default, Rails.env
 
-module Convergese
+module ConvergeSE
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -35,6 +35,11 @@ module Convergese
     #   g.template_engine :erb
     #   g.test_framework  :test_unit, :fixture => true
     # end
+
+    config.generators do |g|
+      g.template_engine :haml
+      g.test_framework  :test_unit, :fixture => false
+    end
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters << :password

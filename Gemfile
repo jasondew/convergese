@@ -17,8 +17,21 @@ gem "sqlite3-ruby", :require => "sqlite3"
 # gem "sqlite3-ruby", :require => "sqlite3"
 # gem "aws-s3", :require => "aws/s3"
 
+gem "haml"
+
+# for mongrel
+gem "mongrel"
+gem "cgi_multipart_eof_fix"
+gem "fastthread"
+gem "mongrel_experimental"
+
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test
 # group :test do
 #   gem "webrat"
 # end
+
+group :test do
+  gem "shoulda"
+  gem "factory_girl"
+end
