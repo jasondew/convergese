@@ -1,0 +1,13 @@
+%h2 Sessions
+
+%ul
+  - @sessions.each do |session|
+    %li
+      = session.title
+      == (#{session.speaker})
+
+      %br
+      = link_to "Edit", edit_session_path(session)
+      = link_to "Remove", session_path(session), :method => :delete, :confirm => "Are you sure?"
+
+%p= link_to "Add Session", new_session_path

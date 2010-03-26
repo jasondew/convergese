@@ -1,0 +1,6 @@
+%h2 Edit Session
+
+#maincontent
+  = form_for @session do |f|
+    = render :partial => "form", :locals => {:f => f}
+    %p= f.submit "Update"

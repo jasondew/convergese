@@ -1,0 +1,8 @@
+%h2 Add Session
+
+#maincontent
+  = form_for @session do |f|
+    = render :partial => "form", :locals => {:f => f}
+    %p
+      = f.submit "Create"
+      = link_to "Cancel", sessions_path

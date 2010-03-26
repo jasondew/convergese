@@ -1,10 +1,11 @@
 source "http://gemcutter.org"
 
-gem "rails", "3.0.0.beta"
+gem "rails", :git => "git://github.com/rails/rails.git" 
+gem "clearance", :git => "git://github.com/thoughtbot/clearance.git", :branch => "rails3"
 gem "haml"
 
 group :development do
-  gem "mysql"
+  gem "sqlite3-ruby", :require => "sqlite3"
 # heroku loads *all* gems and this breaks :/
 #  gem "mongrel"
 #  gem "cgi_multipart_eof_fix"
@@ -13,6 +14,6 @@ group :development do
 end
 
 group :test do
-  gem "shoulda"
-  gem "factory_girl"
+  gem "shoulda", :git => "git://github.com/jasondew/shoulda.git", :branch => "rails3"
+  gem "factory_girl", :git => "git://github.com/thoughtbot/factory_girl.git", :branch => "rails3"
 end

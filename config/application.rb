@@ -36,9 +36,13 @@ module ConvergeSE
     #   g.test_framework  :test_unit, :fixture => true
     # end
 
+    config.session_store :cookie_store, :key => "convergese_session"
+    config.cookie_secret = "0ah91h2roinf0hw08rvha0wh0 2hr0adoizshdv908hwa0ifna0w93hurf0asfoisdflaksnf908  2h3c08qhnwfv"
+
     config.generators do |g|
       g.template_engine :haml
-      g.test_framework  :test_unit, :fixture => false
+      g.test_framework  :test_unit, :fixture => true
+      g.fixture_replacement :factory_girl, :dir => "test/factories"
     end
 
     # Configure sensitive parameters which will be filtered from the log file.
