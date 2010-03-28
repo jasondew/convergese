@@ -12,5 +12,7 @@
     = javascript_include_tag "application"
 
   %body
-    %h1 ConvergeSE 2010
-    = yield
+    #content
+      %h1= image_tag "logo.png"
+      = raw flashes
+      = yield

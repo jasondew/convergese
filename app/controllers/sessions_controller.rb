@@ -10,8 +10,7 @@ class SessionsController < ApplicationController
 
   def create
     if (@session = Session.new params[:session]).save
-      flash[:notice] = "Session successfully created."
-      redirect_to sessions_path
+      redirect_to sessions_path, :notice => "Session successfully created."
     else
       flash[:error] = @session.errors.full_messages.to_sentence
       render :action => "new"
@@ -24,8 +23,7 @@ class SessionsController < ApplicationController
 
   def update
     if (@session = Session.find(params[:id])).update_attributes params[:session]
-      flash[:notice] = "Session successfully updated."
-      redirect_to sessions_path
+      redirect_to sessions_path, :notice => "Session successfully updated."
     else
       flash[:error] = @session.errors.full_messages.to_sentence
       render :action => "edit"
@@ -34,8 +32,7 @@ class SessionsController < ApplicationController
 
   def destroy
     Session.find(params[:id]).destroy
-    flash[:notice] = "Session successfully removed."
-    redirect_to sessions_path
+    redirect_to sessions_path, :notice => "Session successfully removed."
   end
 
 end
