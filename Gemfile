@@ -6,6 +6,7 @@ gem "haml"
 
 group :development do
   gem "sqlite3-ruby", :require => "sqlite3"
+  gem "mysql"
 # heroku loads *all* gems and this breaks :/
 #  gem "mongrel"
 #  gem "cgi_multipart_eof_fix"

@@ -4,16 +4,20 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  mysql: 
+    group: 
+    - :development
+    version: ">= 0"
+  haml: 
+    group: 
+    - :default
+    version: ">= 0"
   sqlite3-ruby: 
     group: 
     - :development
     version: ">= 0"
     require: 
     - sqlite3
-  haml: 
-    group: 
-    - :default
-    version: ">= 0"
   shoulda: 
     group: 
     - :test
@@ -85,6 +89,8 @@ specs:
     source: 0
 - haml: 
     version: 2.2.22
+- mysql: 
+    version: 2.8.1
 - thor: 
     version: 0.13.4
 - railties: 
@@ -98,7 +104,7 @@ specs:
     source: 1
 - sqlite3-ruby: 
     version: 1.2.5
-hash: 0922f613b3353b0d474eb1fee82046b0fd2201a3
+hash: 8f4ba5a66785072e3303d4176040801e9eea9320
 sources: 
 - Git: 
     uri: git://github.com/thoughtbot/factory_girl.git
@@ -118,6 +124,6 @@ sources:
 - Git: 
     uri: git://github.com/rails/rails.git
     git: git://github.com/rails/rails.git
-    ref: 0848c862f098d5fcaa0e11f979a4ce4a2139f6c0
+    ref: edd59b7bb9307f949caf495766da3ba1bb40463a
 - Rubygems: 
     uri: http://gemcutter.org

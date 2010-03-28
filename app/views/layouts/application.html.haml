@@ -1,9 +1,14 @@
 !!!
-%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+%html{:manifest => "/manifest"}
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %title ConvergeSE 2010
-    = stylesheet_link_tag "application"
+
+    %meta{:name => "viewport", :content => "user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"}
+    %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
+    %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}
+
+    %link{:rel => "apple-touch-icon", :href => "icon.png"}
+    = stylesheet_link_tag "application", :media => "screen, mobile"
     = javascript_include_tag "application"
 
   %body
