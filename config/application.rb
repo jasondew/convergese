@@ -37,7 +37,7 @@ module ConvergeSE
     #   g.test_framework  :test_unit, :fixture => true
     # end
 
-    config.middleware.use SassOnHeroku
+    config.middleware.use(SassOnHeroku) if Rails.env == "production"
 
     config.session_store :cookie_store, :key => "convergese_session"
     config.cookie_secret = "0ah91h2roinf0hw08rvha0wh0 2hr0adoizshdv908hwa0ifna0w93hurf0asfoisdflaksnf908  2h3c08qhnwfv"
