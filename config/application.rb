@@ -1,6 +1,7 @@
-require File.expand_path('../boot', __FILE__)
+require File.expand_path("../boot", __FILE__)
 
-require 'rails/all'
+require "rails/all"
+require "lib/sass_on_heroku"
 
 # Auto-require default libraries and those for the current Rails environment.
 Bundler.require :default, Rails.env.to_sym
@@ -35,6 +36,8 @@ module ConvergeSE
     #   g.template_engine :erb
     #   g.test_framework  :test_unit, :fixture => true
     # end
+
+    config.middleware.use SassOnHeroku
 
     config.session_store :cookie_store, :key => "convergese_session"
     config.cookie_secret = "0ah91h2roinf0hw08rvha0wh0 2hr0adoizshdv908hwa0ifna0w93hurf0asfoisdflaksnf908  2h3c08qhnwfv"
